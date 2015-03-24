@@ -146,7 +146,7 @@ xcopy  /i /y "$(ProjectDir)$(MSBuildProjectName)Lib.h" "$(ProjectDir)..\$(MSBuil
       <Command>xcopy /e /i /y "$(OutputPath)$(MSBuildProjectName).dll" "$(ProjectDir)..\$(MSBuildProjectName)Lib\$(Platform)\"
 xcopy /e /i /y "$(OutputPath)$(MSBuildProjectName).lib" "$(ProjectDir)..\$(MSBuildProjectName)Lib\$(Platform)\"
 xcopy /e /i /y "$(OutputPath)$(MSBuildProjectName).pdb" "$(ProjectDir)..\$(MSBuildProjectName)Lib\$(Platform)\"
-xcopy  /i /y "$(ProjectDir)$(MSBuildProjectName)Lib.h" "$(ProjectDir)..\$(MSBuildProjectName)Lib\"
+xcopy  /i /y "$(ProjectDir)$(MSBuildProjectName)Lib.h" "$(ProjectDir)..\$(MSBuildProjectName)Lib\inc\"
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -170,7 +170,7 @@ xcopy  /i /y "$(ProjectDir)$(MSBuildProjectName)Lib.h" "$(ProjectDir)..\$(MSBuil
       <Command>xcopy /e /i /y "$(OutputPath)$(MSBuildProjectName).dll" "$(ProjectDir)..\$(MSBuildProjectName)Lib\$(TargetedSDKArchitecture)\"
 xcopy /e /i /y "$(OutputPath)$(MSBuildProjectName).lib" "$(ProjectDir)..\$(MSBuildProjectName)Lib\$(TargetedSDKArchitecture)\"
 xcopy /e /i /y "$(OutputPath)$(MSBuildProjectName).pdb" "$(ProjectDir)..\$(MSBuildProjectName)Lib\$(TargetedSDKArchitecture)\"
-xcopy  /i /y "$(ProjectDir)$(MSBuildProjectName)Lib.h" "$(ProjectDir)..\$(MSBuildProjectName)Lib\"
+xcopy  /i /y "$(ProjectDir)$(MSBuildProjectName)Lib.h" "$(ProjectDir)..\$(MSBuildProjectName)Lib\inc\"
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>

@@ -67,8 +67,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(KINECTSDK20_DIR)inc;$(ProjectDir)..\KCBv2Lib\inc;$(IncludePath)</IncludePath>
-    <LibraryPath>$(KINECTSDK20_DIR)lib\x64;$(ProjectDir)..\KCBv2Lib\lib\$(Platform)\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(KINECTSDK20_DIR)inc;$(ProjectDir)..\..\KCBv2Lib\inc;$(IncludePath)</IncludePath>
+    <LibraryPath>$(KINECTSDK20_DIR)lib\x64;$(ProjectDir)..\..\KCBv2Lib\lib\$(Platform)\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -105,7 +105,7 @@
       <AdditionalDependencies>kinect20.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy /e /i /y "$(ProjectDir)..\KCBv2Lib\dll\$(Platform)\*.*" "$(SolutionDir)$(Platform)\$(Configuration)\"</Command>
+      <Command>xcopy /e /i /y "$(ProjectDir)..\..\KCBv2Lib\$(Platform)\*.dll" "$(SolutionDir)$(Platform)\$(Configuration)\"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
