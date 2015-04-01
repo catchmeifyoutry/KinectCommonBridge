@@ -99,11 +99,10 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy /i /y "$(OutputPath)$(MSBuildProjectName).dll" "$(ProjectDir)..\$(MSBuildProjectName)Lib\$(Platform)\$(Configuration)\"
-xcopy /i /y "$(OutputPath)$(MSBuildProjectName).lib" "$(ProjectDir)..\$(MSBuildProjectName)Lib\$(Platform)\$(Configuration)\"
-xcopy /i /y "$(OutputPath)$(MSBuildProjectName).pdb" "$(ProjectDir)..\$(MSBuildProjectName)Lib\$(Platform)\$(Configuration)\"
-xcopy /i /y "$(ProjectDir)$(MSBuildProjectName)Lib.h" "$(ProjectDir)..\$(MSBuildProjectName)Lib\"
-</Command>
+      <Command>xcopy /e /i /y "$(OutputPath)$(MSBuildProjectName).dll" "$(ProjectDir)..\$(MSBuildProjectName)Lib\$(PlatformShortname)\$(Configuration)\"
+xcopy /e /i /y "$(OutputPath)$(MSBuildProjectName).lib" "$(ProjectDir)..\$(MSBuildProjectName)Lib\$(PlatformShortname)\$(Configuration)\"
+xcopy /e /i /y "$(OutputPath)$(MSBuildProjectName).pdb" "$(ProjectDir)..\$(MSBuildProjectName)Lib\$(PlatformShortname)\$(Configuration)\"
+xcopy  /i /y "$(ProjectDir)$(MSBuildProjectName)Lib.h" "$(ProjectDir)..\$(MSBuildProjectName)Lib\inc\"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -119,11 +118,10 @@ xcopy /i /y "$(ProjectDir)$(MSBuildProjectName)Lib.h" "$(ProjectDir)..\$(MSBuild
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy /e /i /y "$(OutputPath)$(MSBuildProjectName).dll" "$(ProjectDir)..\$(MSBuildProjectName)Lib\$(TargetedSDKArchitecture)\$(Configuration)\"
-xcopy /e /i /y "$(OutputPath)$(MSBuildProjectName).lib" "$(ProjectDir)..\$(MSBuildProjectName)Lib\$(TargetedSDKArchitecture)\$(Configuration)\"
-xcopy /e /i /y "$(OutputPath)$(MSBuildProjectName).pdb" "$(ProjectDir)..\$(MSBuildProjectName)Lib\$(TargetedSDKArchitecture)\$(Configuration)\"
-xcopy  /i /y "$(ProjectDir)$(MSBuildProjectName)Lib.h" "$(ProjectDir)..\$(MSBuildProjectName)Lib\"
-</Command>
+      <Command>xcopy /e /i /y "$(OutputPath)$(MSBuildProjectName).dll" "$(ProjectDir)..\$(MSBuildProjectName)Lib\$(PlatformShortname)\$(Configuration)\"
+xcopy /e /i /y "$(OutputPath)$(MSBuildProjectName).lib" "$(ProjectDir)..\$(MSBuildProjectName)Lib\$(PlatformShortname)\$(Configuration)\"
+xcopy /e /i /y "$(OutputPath)$(MSBuildProjectName).pdb" "$(ProjectDir)..\$(MSBuildProjectName)Lib\$(PlatformShortname)\$(Configuration)\"
+xcopy  /i /y "$(ProjectDir)$(MSBuildProjectName)Lib.h" "$(ProjectDir)..\$(MSBuildProjectName)Lib\inc\"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -143,11 +141,10 @@ xcopy  /i /y "$(ProjectDir)$(MSBuildProjectName)Lib.h" "$(ProjectDir)..\$(MSBuil
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy /e /i /y "$(OutputPath)$(MSBuildProjectName).dll" "$(ProjectDir)..\$(MSBuildProjectName)Lib\$(Platform)\"
-xcopy /e /i /y "$(OutputPath)$(MSBuildProjectName).lib" "$(ProjectDir)..\$(MSBuildProjectName)Lib\$(Platform)\"
-xcopy /e /i /y "$(OutputPath)$(MSBuildProjectName).pdb" "$(ProjectDir)..\$(MSBuildProjectName)Lib\$(Platform)\"
-xcopy  /i /y "$(ProjectDir)$(MSBuildProjectName)Lib.h" "$(ProjectDir)..\$(MSBuildProjectName)Lib\inc\"
-</Command>
+      <Command>xcopy /e /i /y "$(OutputPath)$(MSBuildProjectName).dll" "$(ProjectDir)..\$(MSBuildProjectName)Lib\$(PlatformShortname)\$(Configuration)\"
+xcopy /e /i /y "$(OutputPath)$(MSBuildProjectName).lib" "$(ProjectDir)..\$(MSBuildProjectName)Lib\$(PlatformShortname)\$(Configuration)\"
+xcopy /e /i /y "$(OutputPath)$(MSBuildProjectName).pdb" "$(ProjectDir)..\$(MSBuildProjectName)Lib\$(PlatformShortname)\$(Configuration)\"
+xcopy  /i /y "$(ProjectDir)$(MSBuildProjectName)Lib.h" "$(ProjectDir)..\$(MSBuildProjectName)Lib\inc\"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -167,11 +164,10 @@ xcopy  /i /y "$(ProjectDir)$(MSBuildProjectName)Lib.h" "$(ProjectDir)..\$(MSBuil
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy /e /i /y "$(OutputPath)$(MSBuildProjectName).dll" "$(ProjectDir)..\$(MSBuildProjectName)Lib\$(TargetedSDKArchitecture)\"
-xcopy /e /i /y "$(OutputPath)$(MSBuildProjectName).lib" "$(ProjectDir)..\$(MSBuildProjectName)Lib\$(TargetedSDKArchitecture)\"
-xcopy /e /i /y "$(OutputPath)$(MSBuildProjectName).pdb" "$(ProjectDir)..\$(MSBuildProjectName)Lib\$(TargetedSDKArchitecture)\"
-xcopy  /i /y "$(ProjectDir)$(MSBuildProjectName)Lib.h" "$(ProjectDir)..\$(MSBuildProjectName)Lib\inc\"
-</Command>
+      <Command>xcopy /e /i /y "$(OutputPath)$(MSBuildProjectName).dll" "$(ProjectDir)..\$(MSBuildProjectName)Lib\$(PlatformShortname)\$(Configuration)\"
+xcopy /e /i /y "$(OutputPath)$(MSBuildProjectName).lib" "$(ProjectDir)..\$(MSBuildProjectName)Lib\$(PlatformShortname)\$(Configuration)\"
+xcopy /e /i /y "$(OutputPath)$(MSBuildProjectName).pdb" "$(ProjectDir)..\$(MSBuildProjectName)Lib\$(PlatformShortname)\$(Configuration)\"
+xcopy  /i /y "$(ProjectDir)$(MSBuildProjectName)Lib.h" "$(ProjectDir)..\$(MSBuildProjectName)Lib\inc\"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
